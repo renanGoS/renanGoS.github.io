@@ -1,6 +1,6 @@
 google.com, pub-8135476019576626, DIRECT, f08c47fec0942fa0
 sssp.bidswitch.net, 2372, RESELLER
-ironsrc.com, 655913, DIRECT, f08c47fec0942fa0
+ironsrc.com, 655913, DIRECT, 5162b2035eb54a63
 facebook.com, 1981308276080988, DIRECT, c3e20eee3f780d68
 facebook.com, 951547447314014, DIRECT, c3e20eee3f780d68
 bold-win.com, 165, RESELLER, 71746737d0bab951
