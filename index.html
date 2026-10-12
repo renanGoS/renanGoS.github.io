@@ -1,13 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Baiduca – Apps & Games</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="alternate icon" type="image/png" href="favicon.png" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap"
+    rel="stylesheet" />
   <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
     :root {
       --bg: #f5f4f0;
@@ -19,7 +31,9 @@
       --white: #ffffff;
     }
 
-    html { scroll-behavior: smooth; }
+    html {
+      scroll-behavior: smooth;
+    }
 
     body {
       background: var(--bg);
@@ -37,6 +51,7 @@
       top: 0;
       z-index: 50;
     }
+
     .nav-inner {
       max-width: 960px;
       margin: 0 auto;
@@ -46,6 +61,7 @@
       align-items: center;
       justify-content: space-between;
     }
+
     .logo {
       font-family: 'Instrument Serif', serif;
       font-size: 1.35rem;
@@ -53,15 +69,18 @@
       text-decoration: none;
       letter-spacing: -0.01em;
     }
+
     .nav-right {
       display: flex;
       align-items: center;
       gap: 4px;
     }
+
     .nav-links {
       display: flex;
       gap: 4px;
     }
+
     .nav-links a {
       color: var(--muted);
       text-decoration: none;
@@ -70,7 +89,11 @@
       border-radius: 6px;
       transition: color 0.15s, background 0.15s;
     }
-    .nav-links a:hover { color: var(--text); background: var(--bg2); }
+
+    .nav-links a:hover {
+      color: var(--text);
+      background: var(--bg2);
+    }
 
     /* LANG TOGGLE */
     .lang-toggle {
@@ -83,6 +106,7 @@
       gap: 2px;
       margin-left: 8px;
     }
+
     .lang-toggle button {
       background: none;
       border: none;
@@ -96,10 +120,11 @@
       transition: background 0.15s, color 0.15s;
       letter-spacing: 0.02em;
     }
+
     .lang-toggle button.active {
       background: var(--white);
       color: var(--text);
-      box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
     }
 
     /* HERO */
@@ -109,6 +134,7 @@
       padding: 72px 24px 64px;
       border-bottom: 1px solid var(--border);
     }
+
     .hero h1 {
       font-family: 'Instrument Serif', serif;
       font-size: clamp(2.4rem, 6vw, 3.8rem);
@@ -117,17 +143,26 @@
       font-weight: 400;
       max-width: 560px;
     }
+
     .hero h1 em {
       font-style: italic;
       color: var(--muted);
     }
+
     .hero p {
       margin-top: 20px;
       color: var(--muted);
       max-width: 380px;
       font-size: 0.95rem;
     }
-    .hero-cta { margin-top: 32px; }
+
+    .hero-cta {
+      margin-top: 32px;
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
     .btn {
       display: inline-flex;
       align-items: center;
@@ -135,14 +170,34 @@
       background: var(--text);
       color: var(--white);
       text-decoration: none;
-      padding: 10px 20px;
+      padding: 10px 18px;
       border-radius: 8px;
       font-size: 0.85rem;
       font-weight: 500;
-      transition: opacity 0.15s;
+      transition: opacity 0.15s, background 0.15s;
+      border: 1px solid transparent;
     }
-    .btn:hover { opacity: 0.8; }
-    .btn svg { width: 14px; height: 14px; }
+
+    .btn:hover {
+      opacity: 0.85;
+    }
+
+    .btn svg {
+      width: 14px;
+      height: 14px;
+      flex-shrink: 0;
+    }
+
+    .btn-secondary {
+      background: var(--white);
+      color: var(--text);
+      border: 1px solid var(--border);
+    }
+
+    .btn-secondary:hover {
+      background: var(--bg2);
+      opacity: 1;
+    }
 
     /* SECTION */
     .section {
@@ -151,18 +206,21 @@
       padding: 64px 24px;
       border-bottom: 1px solid var(--border);
     }
+
     .section-head {
       display: flex;
       align-items: baseline;
       gap: 16px;
       margin-bottom: 40px;
     }
+
     .section-head h2 {
       font-family: 'Instrument Serif', serif;
       font-size: 1.8rem;
       font-weight: 400;
       letter-spacing: -0.02em;
     }
+
     .section-count {
       font-size: 0.78rem;
       color: var(--muted);
@@ -191,11 +249,13 @@
       flex-direction: column;
       transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
     }
+
     .card:hover {
       border-color: #c8c6be;
-      box-shadow: 0 8px 32px rgba(0,0,0,0.07);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.07);
       transform: translateY(-3px);
     }
+
     .card-img {
       width: 100%;
       aspect-ratio: 16/9;
@@ -203,6 +263,7 @@
       display: block;
       background: var(--bg2);
     }
+
     .card-body {
       padding: 16px;
       display: flex;
@@ -210,6 +271,7 @@
       gap: 12px;
       flex: 1;
     }
+
     .card-icon {
       width: 44px;
       height: 44px;
@@ -218,7 +280,12 @@
       flex-shrink: 0;
       border: 1px solid var(--border);
     }
-    .card-info { flex: 1; min-width: 0; }
+
+    .card-info {
+      flex: 1;
+      min-width: 0;
+    }
+
     .card-name {
       font-size: 0.88rem;
       font-weight: 600;
@@ -227,11 +294,13 @@
       overflow: hidden;
       text-overflow: ellipsis;
     }
+
     .card-sub {
       font-size: 0.78rem;
       color: var(--muted);
       margin-top: 2px;
     }
+
     .card-action {
       margin-top: 8px;
       display: inline-flex;
@@ -241,7 +310,99 @@
       font-weight: 500;
       color: var(--accent);
     }
-    .card-action svg { width: 11px; height: 11px; }
+
+    .card-action svg {
+      width: 11px;
+      height: 11px;
+    }
+
+    /* MULTI-PLATFORM CARD */
+    .card-img-wrap {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16/9;
+      background: var(--bg2);
+      display: block;
+    }
+
+    .card-img-anchor {
+      display: block;
+      width: 100%;
+      height: 100%;
+      text-decoration: none;
+    }
+
+    .card-img-anchor .card-img {
+      width: 100%;
+      height: 100%;
+      aspect-ratio: 16/9;
+      object-fit: cover;
+      display: block;
+    }
+
+    .card-badge {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: rgba(26, 26, 24, 0.82);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      color: #ffffff;
+      font-size: 0.68rem;
+      font-weight: 600;
+      padding: 3px 8px;
+      border-radius: 20px;
+      letter-spacing: 0.02em;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      pointer-events: none;
+      z-index: 2;
+    }
+
+    .card-name-link {
+      color: inherit;
+      text-decoration: none;
+      display: block;
+    }
+
+    .card-name-link:hover .card-name {
+      color: var(--accent);
+    }
+
+    .card-store-links {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 8px;
+      flex-wrap: wrap;
+    }
+
+    .store-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 0.72rem;
+      font-weight: 600;
+      padding: 4px 8px;
+      border-radius: 6px;
+      text-decoration: none;
+      background: var(--bg2);
+      color: var(--text);
+      border: 1px solid var(--border);
+      transition: background 0.15s, color 0.15s, border-color 0.15s, transform 0.15s;
+    }
+
+    .store-badge:hover {
+      background: var(--text);
+      color: var(--white);
+      border-color: var(--text);
+      transform: translateY(-1px);
+    }
+
+    .store-badge svg {
+      width: 12px;
+      height: 12px;
+      flex-shrink: 0;
+    }
 
     /* FOOTER */
     footer {
@@ -254,224 +415,319 @@
       flex-wrap: wrap;
       gap: 12px;
     }
-    footer span { font-size: 0.8rem; color: var(--muted); }
+
+    footer span {
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    .footer-links {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
     footer a {
       font-size: 0.8rem;
       color: var(--muted);
       text-decoration: none;
       transition: color 0.15s;
     }
-    footer a:hover { color: var(--text); }
+
+    footer a:hover {
+      color: var(--text);
+    }
 
     @media (max-width: 500px) {
-      .grid { grid-template-columns: 1fr; }
-      .nav-links { display: none; }
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .nav-links {
+        display: none;
+      }
     }
   </style>
 </head>
+
 <body>
 
-<!-- NAV -->
-<nav>
-  <div class="nav-inner">
-    <a class="logo" href="#">Baiduca</a>
-    <div class="nav-right">
-      <div class="nav-links">
-        <a href="#games" data-en="Games" data-pt="Jogos">Games</a>
-        <a href="#apps">Apps</a>
-        <a href="https://play.google.com/store/apps/developer?id=Baiduca" target="_blank">Google Play ↗</a>
-      </div>
-      <div class="lang-toggle">
-        <button id="btn-en" class="active" onclick="setLang('en')">EN</button>
-        <button id="btn-pt" onclick="setLang('pt')">PT</button>
+  <!-- NAV -->
+  <nav>
+    <div class="nav-inner">
+      <a class="logo" href="#">Baiduca</a>
+      <div class="nav-right">
+        <div class="nav-links">
+          <a href="#games" data-en="Games" data-pt="Jogos">Games</a>
+          <a href="#apps">Apps</a>
+          <a href="https://play.google.com/store/apps/developer?id=Baiduca" target="_blank" rel="noopener">Google Play
+            ↗</a>
+          <a href="https://apps.apple.com/us/developer/renan-santana/id6809620151" target="_blank" rel="noopener">App
+            Store ↗</a>
+        </div>
+        <div class="lang-toggle">
+          <button id="btn-en" class="active" onclick="setLang('en')">EN</button>
+          <button id="btn-pt" onclick="setLang('pt')">PT</button>
+        </div>
       </div>
     </div>
-  </div>
-</nav>
+  </nav>
 
-<!-- HERO -->
-<header class="hero">
-  <h1 data-en="Apps and games<br/>" data-pt="Apps e jogos<br/>">Apps and games<br/></h1>
-  <p data-en="We build simple apps and fun games, available for free on Google Play." data-pt="Desenvolvemos aplicativos simples e jogos divertidos disponíveis gratuitamente na Google Play.">We build simple apps and fun games, available for free on Google Play.</p>
-  <div class="hero-cta">
-    <a class="btn" href="https://play.google.com/store/apps/developer?id=Baiduca" target="_blank">
-      <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
-      <span data-en="View on Google Play" data-pt="Ver na Google Play">View on Google Play</span>
-    </a>
-  </div>
-</header>
+  <!-- HERO -->
+  <header class="hero">
+    <h1 data-en="Apps and games<br/>" data-pt="Apps e jogos<br/>">Apps and games<br /></h1>
+    <p data-en="We build simple apps and fun games, available for free on Google Play &amp; App Store."
+      data-pt="Desenvolvemos aplicativos simples e jogos divertidos disponíveis gratuitamente na Google Play e App Store.">
+      We build simple apps and fun games, available for free on Google Play &amp; App Store.</p>
+    <div class="hero-cta">
+      <a class="btn" href="https://play.google.com/store/apps/developer?id=Baiduca" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <path
+            d="M3.609 1.814L13.792 12 3.61 22.186c-.37-.362-.61-.87-.61-1.442V3.256c0-.573.24-1.08.609-1.442zM15.207 13.414l2.455 2.455-12.235 6.99 9.78-9.445zm0-2.828L5.427 1.141l12.235 6.99-2.455 2.455zm1.414 1.414l3.528 2.016c.866.495.866 1.303 0 1.798l-3.528 2.016-2.121-2.121 2.121-2.109z" />
+        </svg>
+        <span data-en="Google Play" data-pt="Google Play">Google Play</span>
+      </a>
+      <a class="btn btn-secondary" href="https://apps.apple.com/us/developer/renan-santana/id6809620151" target="_blank"
+        rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <path
+            d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.37c.62-.75 1.04-1.8 0.92-2.85-.9.04-1.99.6-2.63 1.35-.57.66-.99 1.72-.86 2.74 1.01.08 2.04-.51 2.57-1.24z" />
+        </svg>
+        <span data-en="App Store" data-pt="App Store">App Store</span>
+      </a>
+    </div>
+  </header>
 
-<!-- GAMES -->
-<section id="games" class="section">
-  <div class="section-head">
-    <h2 data-en="Games" data-pt="Jogos">Games</h2>
-    <span class="section-count" data-en="3 games" data-pt="3 jogos">3 games</span>
-  </div>
-  <div class="grid">
+  <!-- APPS -->
+  <section id="apps" class="section">
+    <div class="section-head">
+      <h2>Apps</h2>
+      <span class="section-count" data-en="3 apps" data-pt="3 apps">3 apps</span>
+    </div>
+    <div class="grid">
 
-    <a class="card" href="https://play.google.com/store/apps/details?id=com.baiduca.cacapalavras" target="_blank">
-      <img class="card-img"
-        src="https://play-lh.googleusercontent.com/Oh8w21BUKAbdmhqmfYCpZZD-bGgUgkf-NyY0UqNLFjCtf4JXEJXScuB1tLan0mqOuLgUEVufdlz8xjGH8CDiHw=w1000"
-        alt="Word Search screenshot" loading="lazy" />
-      <div class="card-body">
-        <img class="card-icon"
-          src="https://play-lh.googleusercontent.com/oVnwq6vvZiZdtsb0hAX01Kg4ZkLmmpE5U1SluwF3Fjm2o-YI2JwRxHmuO64huv2-EEfBLH0yf8yoaZz0j84s1w=s200"
-          alt="Word Search icon" loading="lazy" />
-        <div class="card-info">
-          <div class="card-name" data-en="Word Search – Classic Puzzle" data-pt="Caça Palavras - Jogo Clássico">Word Search – Classic Puzzle</div>
-          <div class="card-sub" data-en="Word · Free · ★ 4.8" data-pt="Palavras · Grátis · ★ 4.8">Word · Free · ★ 4.8</div>
-          <div class="card-action">
-            <span data-en="View on Play" data-pt="Ver na Play">View on Play</span>
-            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+      <a class="card" href="https://play.google.com/store/apps/details?id=com.wchatclone.app" target="_blank">
+        <img class="card-img"
+          src="https://play-lh.googleusercontent.com/T3HmHUBJE5XFcYdxNvFbTxQFj3L3bX3uPTIdYRe-jUE7jdKtQbDAah5OFALBktWWGgAOvIlFBm6sCoQmIvO7_yU=w1000"
+          alt="Dual Chat screenshot" loading="lazy" />
+        <div class="card-body">
+          <img class="card-icon"
+            src="https://play-lh.googleusercontent.com/x48uguSuRYd0jAQyfdLkTafuMwWmOeZojbTlVFsyCtARQ0m8cKXTGREMQsQ15CM8c8Dk6Yk6jUOkxD1Zvm2M=s200"
+            alt="Dual Chat icon" loading="lazy" />
+          <div class="card-info">
+            <div class="card-name">Dual Chat – Clone WhatsWeb</div>
+            <div class="card-sub" data-en="Communication · Free · ★ 4.8" data-pt="Comunicação · Grátis · ★ 4.8">
+              Communication · Free · ★ 4.8</div>
+            <div class="card-action">
+              <span data-en="View on Play" data-pt="Ver na Play">View on Play</span>
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                <path d="M7 17L17 7M17 7H7M17 7v10" />
+              </svg>
+            </div>
           </div>
         </div>
-      </div>
-    </a>
-
-    <a class="card" href="https://play.google.com/store/apps/details?id=com.baiduca.flowmax" target="_blank">
-      <img class="card-img"
-        src="https://play-lh.googleusercontent.com/7tuyds1uyz5iiLnW1WjlsTvPF3XCUbsZDlr80y-5BHtDz-gWK160us_UyE8dEmnqlg8qAeXhmoDdGLiyFWutcCI=w1000"
-        alt="Flow Max screenshot" loading="lazy" />
-      <div class="card-body">
-        <img class="card-icon"
-          src="https://play-lh.googleusercontent.com/gYWq0wf2UfAPIOAa459XxpnA9olqDBb8PxxzQ-kbPlDZwAflbGY22MQSqA43NYM74Qu-hftXXoo6L1NiLOVosA=s200"
-          alt="Flow Max icon" loading="lazy" />
-        <div class="card-info">
-            <div class="card-name" data-en="Flow Max: Connect the Dots" data-pt="Flow Max: Conecte os pontos">Flow Max: Connect the Dots</div>
-          <div class="card-sub" data-en="Puzzle · Free · ★ 5.0" data-pt="Puzzle · Grátis · ★ 5.0">Puzzle · Free · ★ 5.0</div>
-          <div class="card-action">
-            <span data-en="View on Play" data-pt="Ver na Play">View on Play</span>
-            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
-          </div>
-        </div>
-      </div>
-    </a>
-
-    <a class="card" href="https://play.google.com/store/apps/details?id=com.baiduca.crossmath" target="_blank">
-      <img class="card-img"
-        src="https://play-lh.googleusercontent.com/vr4aUwhxJJbqX_Vk80WPQGCWL0Mt_R5WWYUXeV9986Z1KzmFd_HoDSs75FJYQ29Xuz8KWh2tZx3Xo_9eL5R9=w1000"
-        alt="CrossMath screenshot" loading="lazy" />
-      <div class="card-body">
-        <img class="card-icon"
-          src="https://play-lh.googleusercontent.com/FL2uUBqqGScy4Qqw6WA_Zm2Gze4vGZlbH_wuw6oN4tNKe5g9TGfNRtiOE64ENXsUPpjtmk3L4m3ZRB9somY9TWo=s200"
-          alt="CrossMath icon" loading="lazy" />
-        <div class="card-info">
-          <div class="card-name" data-en="CrossMath Master: Grid Puzzle" data-pt="CrossMath Master: Matemática">CrossMath Master: Grid Puzzle</div>
-          <div class="card-sub" data-en="Puzzle · Free · ★ new" data-pt="Puzzle · Grátis · ★ novo">Puzzle · Free · ★ new</div>
-          <div class="card-action">
-            <span data-en="View on Play" data-pt="Ver na Play">View on Play</span>
-            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
-          </div>
-        </div>
-      </div>
-    </a>
-
-  </div>
-</section>
-
-<!-- APPS -->
-<section id="apps" class="section">
-  <div class="section-head">
-    <h2>Apps</h2>
-    <span class="section-count" data-en="3 apps" data-pt="3 apps">3 apps</span>
-  </div>
-  <div class="grid">
-
-    <a class="card" href="https://play.google.com/store/apps/details?id=com.wchatclone.app" target="_blank">
-      <img class="card-img"
-        src="https://play-lh.googleusercontent.com/T3HmHUBJE5XFcYdxNvFbTxQFj3L3bX3uPTIdYRe-jUE7jdKtQbDAah5OFALBktWWGgAOvIlFBm6sCoQmIvO7_yU=w1000"
-        alt="Dual Chat screenshot" loading="lazy" />
-      <div class="card-body">
-        <img class="card-icon"
-          src="https://play-lh.googleusercontent.com/x48uguSuRYd0jAQyfdLkTafuMwWmOeZojbTlVFsyCtARQ0m8cKXTGREMQsQ15CM8c8Dk6Yk6jUOkxD1Zvm2M=s200"
-          alt="Dual Chat icon" loading="lazy" />
-        <div class="card-info">
-          <div class="card-name">Dual Chat – Clone WhatsWeb</div>
-          <div class="card-sub" data-en="Communication · Free · ★ 4.7" data-pt="Comunicação · Grátis · ★ 4.7">Communication · Free · ★ 4.7</div>
-          <div class="card-action">
-            <span data-en="View on Play" data-pt="Ver na Play">View on Play</span>
-            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
-          </div>
-        </div>
-      </div>
-    </a>
-
-      <a class="card" href="https://play.google.com/store/apps/details?id=com.baiduca.cleaner" target="_blank">
-          <img class="card-img"
-               src="https://play-lh.googleusercontent.com/2eoz7ZTOQgTYjYpD2HfXtychhwuxQvTQ3l1Ro45SAuhxwWUSYElY4qMBYjcDk53P9dSUYd_gJB89qVu-4dk3=w416-h235-rw"
-               alt="Cleaner screenshot" loading="lazy" />
-          <div class="card-body">
-              <img class="card-icon"
-                   src="https://play-lh.googleusercontent.com/xCzlfCUXMRBIOvGlyy8s-ySRwrSY8nyw3LBjUF2pAfS7dy6gtZdSmzGZjCBIU7v7X6T6zX1QXer3qHZg_y6xMWI=w240-h480"
-                   alt="Cleaner icon" loading="lazy" />
-              <div class="card-info">
-                  <div class="card-name" data-en="Cleaner – Phone Optimizer" data-pt="Cleaner – Otimizador de Celular">Cleaner – Phone Optimizer</div>
-                  <div class="card-sub" data-en="Tools · Free · ★ new" data-pt="Ferramentas · Grátis · ★ novo">Tools · Free · ★ new</div>
-                  <div class="card-action">
-                      <span data-en="View on Play" data-pt="Ver na Play">View on Play</span>
-                      <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
-                  </div>
-              </div>
-          </div>
       </a>
 
-    <a class="card" href="https://play.google.com/store/apps/details?id=com.baiduca.lockapp" target="_blank">
-      <img class="card-img"
-        src="https://play-lh.googleusercontent.com/60zKXj8xJeviE631jMP3RCcfYm2wbpTyN4BLIE8acdx8w-5iu0ia1YVYK2simMwxBhgaNTuPm9xjXl7O5hJOHA=w416-h235-rw"
-        alt="App Lock screenshot" loading="lazy" />
-      <div class="card-body">
-        <img class="card-icon"
-          src="https://play-lh.googleusercontent.com/epQAcR9K9_G8CMGY3NgpB807UaNIXW8Gw3G-FTSYkuuspwL_jNOHbA9-R7fo_p-uLf3r7vtLxZZUuiw97Cba=s200"
-          alt="App Lock icon" loading="lazy" />
-        <div class="card-info">
-          <div class="card-name" data-en="App Lock – Privacy &amp; Security" data-pt="AppLock – Privacidade &amp; Segurança">App Lock – Privacy &amp; Security</div>
-          <div class="card-sub" data-en="Tools · Free · ★ 4.9" data-pt="Ferramentas · Grátis · ★ 4.9">Tools · Free · ★ 4.9</div>
-          <div class="card-action">
-            <span data-en="View on Play" data-pt="Ver na Play">View on Play</span>
-            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+      <a class="card" href="https://play.google.com/store/apps/details?id=com.baiduca.cleaner" target="_blank">
+        <img class="card-img"
+          src="https://play-lh.googleusercontent.com/2eoz7ZTOQgTYjYpD2HfXtychhwuxQvTQ3l1Ro45SAuhxwWUSYElY4qMBYjcDk53P9dSUYd_gJB89qVu-4dk3=w416-h235-rw"
+          alt="Cleaner screenshot" loading="lazy" />
+        <div class="card-body">
+          <img class="card-icon"
+            src="https://play-lh.googleusercontent.com/xCzlfCUXMRBIOvGlyy8s-ySRwrSY8nyw3LBjUF2pAfS7dy6gtZdSmzGZjCBIU7v7X6T6zX1QXer3qHZg_y6xMWI=w240-h480"
+            alt="Cleaner icon" loading="lazy" />
+          <div class="card-info">
+            <div class="card-name" data-en="Cleaner – Phone Optimizer" data-pt="Cleaner – Otimizador de Celular">Cleaner
+              – Phone Optimizer</div>
+            <div class="card-sub" data-en="Tools · Free · ★ 4.6" data-pt="Ferramentas · Grátis · ★ 4.6">Tools · Free · ★
+              4.6</div>
+            <div class="card-action">
+              <span data-en="View on Play" data-pt="Ver na Play">View on Play</span>
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                <path d="M7 17L17 7M17 7H7M17 7v10" />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </a>
+
+      <a class="card" href="https://play.google.com/store/apps/details?id=com.baiduca.lockapp" target="_blank">
+        <img class="card-img"
+          src="https://play-lh.googleusercontent.com/60zKXj8xJeviE631jMP3RCcfYm2wbpTyN4BLIE8acdx8w-5iu0ia1YVYK2simMwxBhgaNTuPm9xjXl7O5hJOHA=w416-h235-rw"
+          alt="App Lock screenshot" loading="lazy" />
+        <div class="card-body">
+          <img class="card-icon"
+            src="https://play-lh.googleusercontent.com/epQAcR9K9_G8CMGY3NgpB807UaNIXW8Gw3G-FTSYkuuspwL_jNOHbA9-R7fo_p-uLf3r7vtLxZZUuiw97Cba=s200"
+            alt="App Lock icon" loading="lazy" />
+          <div class="card-info">
+            <div class="card-name" data-en="App Lock – Privacy &amp; Security"
+              data-pt="AppLock – Privacidade &amp; Segurança">App Lock – Privacy &amp; Security</div>
+            <div class="card-sub" data-en="Tools · Free · ★ 4.9" data-pt="Ferramentas · Grátis · ★ 4.9">Tools · Free · ★
+              4.9</div>
+            <div class="card-action">
+              <span data-en="View on Play" data-pt="Ver na Play">View on Play</span>
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                <path d="M7 17L17 7M17 7H7M17 7v10" />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- GAMES -->
+  <section id="games" class="section">
+    <div class="section-head">
+      <h2 data-en="Games" data-pt="Jogos">Games</h2>
+      <span class="section-count" data-en="3 games" data-pt="3 jogos">3 games</span>
+    </div>
+    <div class="grid">
+
+      <a class="card" href="https://play.google.com/store/apps/details?id=com.baiduca.cacapalavras" target="_blank">
+        <img class="card-img"
+          src="https://play-lh.googleusercontent.com/Oh8w21BUKAbdmhqmfYCpZZD-bGgUgkf-NyY0UqNLFjCtf4JXEJXScuB1tLan0mqOuLgUEVufdlz8xjGH8CDiHw=w1000"
+          alt="Word Search screenshot" loading="lazy" />
+        <div class="card-body">
+          <img class="card-icon"
+            src="https://play-lh.googleusercontent.com/oVnwq6vvZiZdtsb0hAX01Kg4ZkLmmpE5U1SluwF3Fjm2o-YI2JwRxHmuO64huv2-EEfBLH0yf8yoaZz0j84s1w=s200"
+            alt="Word Search icon" loading="lazy" />
+          <div class="card-info">
+            <div class="card-name" data-en="Word Search – Classic Puzzle" data-pt="Caça Palavras - Jogo Clássico">Word
+              Search – Classic Puzzle</div>
+            <div class="card-sub" data-en="Word · Free · ★ 4.8" data-pt="Palavras · Grátis · ★ 4.8">Word · Free · ★ 4.8
+            </div>
+            <div class="card-action">
+              <span data-en="View on Play" data-pt="Ver na Play">View on Play</span>
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                <path d="M7 17L17 7M17 7H7M17 7v10" />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </a>
+
+      <a class="card" href="https://play.google.com/store/apps/details?id=com.baiduca.flowmax" target="_blank">
+        <img class="card-img"
+          src="https://play-lh.googleusercontent.com/7tuyds1uyz5iiLnW1WjlsTvPF3XCUbsZDlr80y-5BHtDz-gWK160us_UyE8dEmnqlg8qAeXhmoDdGLiyFWutcCI=w1000"
+          alt="Flow Max screenshot" loading="lazy" />
+        <div class="card-body">
+          <img class="card-icon"
+            src="https://play-lh.googleusercontent.com/gYWq0wf2UfAPIOAa459XxpnA9olqDBb8PxxzQ-kbPlDZwAflbGY22MQSqA43NYM74Qu-hftXXoo6L1NiLOVosA=s200"
+            alt="Flow Max icon" loading="lazy" />
+          <div class="card-info">
+            <div class="card-name" data-en="Flow Max: Connect the Dots" data-pt="Flow Max: Conecte os pontos">Flow Max:
+              Connect the Dots</div>
+            <div class="card-sub" data-en="Puzzle · Free · ★ 5.0" data-pt="Puzzle · Grátis · ★ 5.0">Puzzle · Free · ★
+              5.0</div>
+            <div class="card-action">
+              <span data-en="View on Play" data-pt="Ver na Play">View on Play</span>
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                <path d="M7 17L17 7M17 7H7M17 7v10" />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </a>
+
+      <div class="card card--multi">
+        <div class="card-img-wrap">
+          <a class="card-img-anchor card-img-anchor-crossmath"
+            href="https://apps.apple.com/us/app/math-puzzle-crossmath-master/id6809620149" target="_blank"
+            rel="noopener">
+            <img class="card-img"
+              src="https://play-lh.googleusercontent.com/vr4aUwhxJJbqX_Vk80WPQGCWL0Mt_R5WWYUXeV9986Z1KzmFd_HoDSs75FJYQ29Xuz8KWh2tZx3Xo_9eL5R9=w1000"
+              alt="CrossMath screenshot" loading="lazy" />
+          </a>
+          <span class="card-badge" data-en="iOS &amp; Android" data-pt="iOS &amp; Android">iOS &amp; Android</span>
+        </div>
+        <div class="card-body">
+          <img class="card-icon"
+            src="https://play-lh.googleusercontent.com/FL2uUBqqGScy4Qqw6WA_Zm2Gze4vGZlbH_wuw6oN4tNKe5g9TGfNRtiOE64ENXsUPpjtmk3L4m3ZRB9somY9TWo=s200"
+            alt="CrossMath icon" loading="lazy" />
+          <div class="card-info">
+            <a class="card-name-link card-name-link-crossmath"
+              href="https://apps.apple.com/us/app/math-puzzle-crossmath-master/id6809620149" target="_blank"
+              rel="noopener">
+              <div class="card-name" data-en="CrossMath Master: Grid Puzzle" data-pt="CrossMath Master: Matemática">
+                CrossMath Master: Grid Puzzle</div>
+            </a>
+            <div class="card-sub" data-en="Puzzle · Free · ★ 5.0" data-pt="Puzzle · Grátis · ★ 5.0">Puzzle · Free · ★
+              5.0</div>
+            <div class="card-store-links">
+              <a class="store-badge" href="https://apps.apple.com/us/app/math-puzzle-crossmath-master/id6809620149"
+                target="_blank" rel="noopener" title="Download on App Store">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.37c.62-.75 1.04-1.8 0.92-2.85-.9.04-1.99.6-2.63 1.35-.57.66-.99 1.72-.86 2.74 1.01.08 2.04-.51 2.57-1.24z" />
+                </svg>
+                <span>App Store</span>
+              </a>
+              <a class="store-badge" href="https://play.google.com/store/apps/details?id=com.baiduca.crossmath"
+                target="_blank" rel="noopener" title="Get it on Google Play">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M3.609 1.814L13.792 12 3.61 22.186c-.37-.362-.61-.87-.61-1.442V3.256c0-.573.24-1.08.609-1.442zM15.207 13.414l2.455 2.455-12.235 6.99 9.78-9.445zm0-2.828L5.427 1.141l12.235 6.99-2.455 2.455zm1.414 1.414l3.528 2.016c.866.495.866 1.303 0 1.798l-3.528 2.016-2.121-2.121 2.121-2.109z" />
+                </svg>
+                <span>Google Play</span>
+              </a>
+            </div>
           </div>
         </div>
       </div>
-    </a>
 
-  </div>
-</section>
+    </div>
+  </section>
 
-<!-- FOOTER -->
-<footer>
-  <span>© 2026 Baiduca · baiduca.com</span>
-  <a href="https://play.google.com/store/apps/developer?id=Baiduca" target="_blank">Google Play ↗</a>
-</footer>
+  <!-- FOOTER -->
+  <footer>
+    <span>© 2026 Baiduca · baiduca.com</span>
+    <div class="footer-links">
+      <a href="https://play.google.com/store/apps/developer?id=Baiduca" target="_blank" rel="noopener">Google Play ↗</a>
+      <a href="https://apps.apple.com/us/developer/renan-santana/id6809620151" target="_blank" rel="noopener">App Store
+        ↗</a>
+    </div>
+  </footer>
 
-<script>
-  function setLang(lang) {
-    // Update html lang attribute
-    document.documentElement.lang = lang === 'pt' ? 'pt-BR' : 'en';
+  <script>
+    function setLang(lang) {
+      // Update html lang attribute
+      document.documentElement.lang = lang === 'pt' ? 'pt-BR' : 'en';
 
-    // Update page title
-    document.title = lang === 'pt' ? 'Baiduca – Apps & Jogos' : 'Baiduca – Apps & Games';
+      // Update page title
+      document.title = lang === 'pt' ? 'Baiduca – Apps & Jogos' : 'Baiduca – Apps & Games';
 
-    // Update all elements with data-en / data-pt
-    document.querySelectorAll('[data-en]').forEach(el => {
-      const val = el.getAttribute('data-' + lang);
-      if (!val) return;
-      // Use innerHTML for elements that may contain tags (like <em>)
-      if (val.includes('<')) {
-        el.innerHTML = val;
-      } else {
-        el.textContent = val;
-      }
-    });
+      // Update all elements with data-en / data-pt
+      document.querySelectorAll('[data-en]').forEach(el => {
+        const val = el.getAttribute('data-' + lang);
+        if (!val) return;
+        // Use innerHTML for elements that may contain tags (like <em>)
+        if (val.includes('<')) {
+          el.innerHTML = val;
+        } else {
+          el.textContent = val;
+        }
+      });
 
-    // Update nav Games/Jogos anchor text
-    const gamesLink = document.querySelector('a[href="#games"]');
-    if (gamesLink) gamesLink.textContent = lang === 'pt' ? 'Jogos' : 'Games';
+      // Update nav Games/Jogos anchor text
+      const gamesLink = document.querySelector('a[href="#games"]');
+      if (gamesLink) gamesLink.textContent = lang === 'pt' ? 'Jogos' : 'Games';
 
-    // Update toggle buttons
-    document.getElementById('btn-en').classList.toggle('active', lang === 'en');
-    document.getElementById('btn-pt').classList.toggle('active', lang === 'pt');
-  }
-</script>
+      // Update toggle buttons
+      document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+      document.getElementById('btn-pt').classList.toggle('active', lang === 'pt');
+    }
+
+    // Set default crossmath card click destination according to OS
+    if (!/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+      const playStoreUrl = 'https://play.google.com/store/apps/details?id=com.baiduca.crossmath';
+      document.querySelectorAll('.card-img-anchor-crossmath, .card-name-link-crossmath').forEach(el => {
+        el.href = playStoreUrl;
+      });
+    }
+  </script>
 
 </body>
+
 </html>
