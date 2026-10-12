@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Política de Privacidade · Ninna: Baby Tracker AI · Baiduca</title>
+  <meta name="description" content="Política de Privacidade do aplicativo Ninna: Baby Tracker AI desenvolvido pela Baiduca." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #f5f4f0;
+      --bg2: #eceae3;
+      --card-bg: #ffffff;
+      --text: #1a1a18;
+      --muted: #6f6e69;
+      --border: #dddbd3;
+      --accent: #5e48e8;
+      --accent-hover: #4a34d0;
+      --callout-bg: #fff8eb;
+      --callout-border: #f5d491;
+      --callout-text: #744210;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Instrument Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      font-size: 16px;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* NAV */
+    nav {
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(8px);
+    }
+    .nav-inner {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 0 24px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .logo {
+      font-family: 'Instrument Serif', Georgia, serif;
+      font-size: 1.45rem;
+      color: var(--text);
+      text-decoration: none;
+      letter-spacing: -0.01em;
+    }
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .nav-link {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: color 0.15s;
+    }
+    .nav-link:hover {
+      color: var(--text);
+    }
+
+    /* LANG TOGGLE */
+    .lang-toggle {
+      display: flex;
+      align-items: center;
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 3px;
+      gap: 2px;
+    }
+    .lang-toggle button {
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-family: 'Instrument Sans', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--muted);
+      padding: 4px 10px;
+      border-radius: 5px;
+      transition: background 0.15s, color 0.15s;
+      letter-spacing: 0.02em;
+    }
+    .lang-toggle button.active {
+      background: #ffffff;
+      color: var(--text);
+      box-shadow: 0 1px 2px rgba(0,0,0,0.06);
+    }
+
+    /* CONTENT SHELL */
+    main {
+      max-width: 820px;
+      margin: 32px auto 80px;
+      padding: 0 24px;
+    }
+
+    .doc-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 40px 36px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+    }
+
+    @media (max-width: 600px) {
+      .doc-card {
+        padding: 24px 20px;
+      }
+      main {
+        margin: 20px auto 48px;
+      }
+    }
+
+    /* HEADER */
+    .badge {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--accent);
+      background: #f1edfe;
+      padding: 4px 10px;
+      border-radius: 6px;
+      margin-bottom: 12px;
+    }
+
+    h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      line-height: 1.25;
+      color: var(--text);
+      margin-bottom: 8px;
+      letter-spacing: -0.02em;
+    }
+
+    .meta-line {
+      color: var(--muted);
+      font-size: 0.9rem;
+      margin-bottom: 24px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .intro {
+      font-size: 1.05rem;
+      line-height: 1.7;
+      margin-bottom: 32px;
+      color: #2b2b28;
+    }
+
+    /* SECTIONS */
+    .policy-section {
+      margin-top: 32px;
+    }
+
+    h2 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 12px;
+      letter-spacing: -0.01em;
+    }
+
+    p {
+      margin-bottom: 14px;
+      color: #353430;
+    }
+
+    ul {
+      margin: 10px 0 18px 22px;
+      color: #353430;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    a:hover {
+      color: var(--accent-hover);
+    }
+
+    .callout {
+      background: var(--callout-bg);
+      border: 1px solid var(--callout-border);
+      border-radius: 10px;
+      padding: 14px 18px;
+      margin: 16px 0;
+      color: var(--callout-text);
+      font-weight: 500;
+    }
+    .callout p {
+      margin-bottom: 0;
+      color: inherit;
+    }
+
+    /* FOOTER */
+    footer {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+      border-top: 1px solid var(--border);
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+
+    footer a {
+      color: var(--muted);
+      text-decoration: none;
+    }
+    footer a:hover {
+      color: var(--text);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-inner">
+      <a class="logo" href="https://baiduca.com">Baiduca</a>
+      <div class="nav-right">
+        <a class="nav-link" href="https://baiduca.com">← Apps & Games</a>
+        <div class="lang-toggle" role="tablist" aria-label="Language selection">
+          <button id="btn-pt" class="active" onclick="switchLang('pt')">PT</button>
+          <button id="btn-en" onclick="switchLang('en')">EN</button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- MAIN -->
+  <main>
+    <div class="doc-card">
+      <span class="badge">Ninna: Baby Tracker AI</span>
+
+      <!-- PORTUGUÊS -->
+      <article id="lang-pt">
+        <h1>Política de Privacidade</h1>
+        <div class="meta-line">
+          Última atualização: 12 de outubro de 2026 · Versão: 2026-10-12
+        </div>
+        <div class="intro">
+          Esta política explica, em linguagem simples, quais dados o Ninna: Baby Tracker AI coleta, por que coleta, com quem compartilha e como você controla tudo isso. Como o app trata dados de bebês e crianças, seguimos as regras específicas do Art. 14 da Lei Geral de Proteção de Dados (LGPD, Lei nº 13.709/2018).
+        </div>
+        
+      <section class="policy-section" id="controller">
+        <h2>1. Quem somos e como falar com a gente</h2>
+        <p>O Ninna: Baby Tracker AI é o controlador dos dados tratados no aplicativo, ou seja, quem decide como e por que eles são usados.</p>
+<p>Para qualquer dúvida ou pedido sobre privacidade, fale com o nosso encarregado de proteção de dados (DPO) pelo e-mail <a href="mailto:privacidade@baiduca.com">privacidade@baiduca.com</a>. Respondemos em até 15 dias.</p>
+      </section>
+
+      <section class="policy-section" id="data">
+        <h2>2. Quais dados coletamos</h2>
+        <p>Coletamos apenas o necessário para o app funcionar:</p>
+<ul>
+<li>Conta: e-mail, senha (guardada de forma criptografada) ou identificador do login com Google ou Apple.</li>
+<li>Quem cuida: nome ou apelido e papel (mãe, pai ou outra pessoa que cuida).</li>
+<li>Bebê: nome ou apelido, data de nascimento, sexo (opcional) e foto ou avatar, se você escolher um.</li>
+<li>Rotina: mamadas, fraldas, sonecas, sono, humor, remédios e anotações que você registrar.</li>
+<li>Crescimento: peso, altura e outras medições.</li>
+<li>Voz e mensagens: áudios gravados para registrar atividades por voz e mensagens enviadas ao assistente de IA.</li>
+<li>Integrações opcionais: identificador do Telegram ou número do WhatsApp, apenas se você conectar essas integrações.</li>
+<li>Respostas do cadastro: fase do bebê e respostas sobre a rotina.</li>
+<li>Dados técnicos: idioma, fuso horário e registros de acesso necessários para segurança.</li>
+</ul>
+<p>Não coletamos sua localização, seus contatos nem dados para publicidade.</p>
+      </section>
+
+      <section class="policy-section" id="purposes">
+        <h2>3. Para que usamos os dados</h2>
+        <ul>
+<li>Exibir a rotina do bebê, a linha do tempo e o histórico.</li>
+<li>Fazer cálculos estatísticos, como janelas de sono, médias e curvas de crescimento.</li>
+<li>Gerar sugestões, previsões e análises com inteligência artificial dentro do app.</li>
+<li>Transcrever áudios e entender mensagens para criar registros por voz.</li>
+<li>Manter sua conta segura, prevenir abusos e dar suporte.</li>
+</ul>
+<p>Não vendemos seus dados, não usamos os dados do bebê para publicidade e não criamos perfis para marketing.</p>
+      </section>
+
+      <section class="policy-section" id="children">
+        <h2>4. Dados de crianças (Art. 14 da LGPD)</h2>
+        <p>O Ninna: Baby Tracker AI é feito para mães, pais e responsáveis adultos acompanharem a rotina de uma criança. Ele não se destina ao uso pela própria criança.</p>
+<p>Só tratamos os dados do bebê com o consentimento específico e em destaque de pelo menos um dos pais ou do responsável legal, dado no cadastro. Todo tratamento é feito no melhor interesse da criança e limitado ao necessário para as finalidades acima.</p>
+<p>Você pode revogar esse consentimento a qualquer momento pelo e-mail <a href="mailto:privacidade@baiduca.com">privacidade@baiduca.com</a> ou excluindo a conta no Perfil.</p>
+      </section>
+
+      <section class="policy-section" id="ai">
+        <h2>5. Inteligência artificial e provedores parceiros</h2>
+        <p>Algumas funções usam serviços de inteligência artificial de terceiros. Para que funcionem, enviamos a esses provedores apenas o conteúdo necessário para cada tarefa:</p>
+<ul>
+<li>Transcrição de voz: o áudio gravado é enviado para transcrição à OpenAI, ao Google (Gemini) ou à Groq, conforme o serviço ativo. Não guardamos o arquivo de áudio nos nossos servidores; guardamos apenas o registro criado a partir dele.</li>
+<li>Assistente e análises: mensagens enviadas ao assistente e informações da rotina do bebê (como horários, quantidades e idade) são enviadas à OpenAI ou ao Google (Gemini) para gerar respostas, resumos e análises.</li>
+</ul>
+<p>As respostas da IA podem conter erros e não substituem a avaliação de um profissional de saúde. Confira sempre os registros criados por voz.</p>
+      </section>
+
+      <section class="policy-section" id="sharing">
+        <h2>6. Com quem compartilhamos</h2>
+        <ul>
+<li>Provedores de inteligência artificial descritos na seção 5.</li>
+<li>Provedores de hospedagem e banco de dados que mantêm o app funcionando.</li>
+<li>Google ou Apple, quando você escolhe entrar com essas contas.</li>
+<li>Telegram ou WhatsApp, apenas se você conectar essas integrações.</li>
+<li>Autoridades públicas, quando houver obrigação legal ou ordem judicial.</li>
+</ul>
+<p>Esses parceiros só podem usar os dados para prestar o serviço ao Ninna: Baby Tracker AI.</p>
+      </section>
+
+      <section class="policy-section" id="transfer">
+        <h2>7. Transferência internacional</h2>
+        <p>Parte desses provedores mantém servidores fora do Brasil, principalmente nos Estados Unidos. Nesses casos, a transferência é feita nas hipóteses permitidas pelo Art. 33 da LGPD, com provedores que oferecem garantias de proteção de dados.</p>
+      </section>
+
+      <section class="policy-section" id="retention">
+        <h2>8. Por quanto tempo guardamos</h2>
+        <p>Guardamos os dados enquanto sua conta existir. Quando você exclui a conta no Perfil, apagamos de forma definitiva a conta, os perfis dos bebês e todo o histórico.</p>
+<p>Alguns registros podem ser mantidos pelo prazo exigido por lei, como registros de acesso, apenas para cumprir essa obrigação.</p>
+      </section>
+
+      <section class="policy-section" id="rights">
+        <h2>9. Seus direitos e como exercê-los</h2>
+        <p>Pela LGPD (Art. 18), você pode:</p>
+<ul>
+<li>Confirmar se tratamos seus dados e acessá-los.</li>
+<li>Corrigir dados incompletos ou desatualizados: edite o perfil do bebê, as atividades e as medições no próprio app.</li>
+<li>Levar seus dados para outro serviço (portabilidade): exporte em PDF, Excel ou CSV na tela de Insights.</li>
+<li>Excluir sua conta e todos os dados: use "Excluir conta e dados" no Perfil.</li>
+<li>Saber com quem compartilhamos e revogar o consentimento.</li>
+<li>Pedir anonimização, bloqueio ou eliminação de dados desnecessários.</li>
+</ul>
+<p>Para os pedidos que não estão disponíveis direto no app, escreva para <a href="mailto:privacidade@baiduca.com">privacidade@baiduca.com</a>. Você também pode reclamar à Autoridade Nacional de Proteção de Dados (ANPD).</p>
+      </section>
+
+      <section class="policy-section" id="security">
+        <h2>10. Segurança</h2>
+        <p>Usamos conexão criptografada, senhas protegidas por hash, autenticação por token, limite de tentativas e chaves de acesso aos provedores de IA guardadas apenas no servidor, nunca no aplicativo. Nenhum sistema é totalmente imune a falhas; se ocorrer um incidente que traga risco relevante, avisaremos você e a ANPD.</p>
+      </section>
+
+      <section class="policy-section" id="changes">
+        <h2>11. Mudanças nesta política</h2>
+        <p>Se mudarmos esta política de forma relevante, avisaremos no app e pediremos um novo aceite antes de continuar o tratamento.</p>
+      </section>
+      </article>
+
+      <!-- ENGLISH -->
+      <article id="lang-en" style="display: none;">
+        <h1>Privacy Policy</h1>
+        <div class="meta-line">
+          Last updated: October 12, 2026 · Version: 2026-10-12
+        </div>
+        <div class="intro">
+          This policy explains, in plain language, what data Ninna: Baby Tracker AI collects, why, who we share it with and how you stay in control. Because the app handles data about babies and children, we follow the specific rules of Article 14 of Brazil's General Data Protection Law (LGPD, Law No. 13,709/2018).
+        </div>
+        
+      <section class="policy-section" id="controller">
+        <h2>1. Who we are and how to reach us</h2>
+        <p>Ninna: Baby Tracker AI is the controller of the data processed in the app, meaning we decide how and why it is used.</p>
+<p>For any privacy question or request, contact our Data Protection Officer (DPO) at <a href="mailto:privacidade@baiduca.com">privacidade@baiduca.com</a>. We reply within 15 days.</p>
+      </section>
+
+      <section class="policy-section" id="data">
+        <h2>2. What data we collect</h2>
+        <p>We only collect what the app needs to work:</p>
+<ul>
+<li>Account: email, password (stored encrypted) or the identifier from Google or Apple sign-in.</li>
+<li>Caregiver: name or nickname and role (mom, dad or other caregiver).</li>
+<li>Baby: name or nickname, date of birth, sex (optional) and a photo or avatar, if you choose one.</li>
+<li>Routine: feeds, diapers, naps, sleep, mood, medicines and notes you log.</li>
+<li>Growth: weight, height and other measurements.</li>
+<li>Voice and messages: audio recorded to log activities by voice and messages sent to the AI assistant.</li>
+<li>Optional integrations: your Telegram identifier or WhatsApp number, only if you connect these integrations.</li>
+<li>Sign-up answers: your baby's stage and answers about the routine.</li>
+<li>Technical data: language, time zone and access logs needed for security.</li>
+</ul>
+<p>We do not collect your location, your contacts or any data for advertising.</p>
+      </section>
+
+      <section class="policy-section" id="purposes">
+        <h2>3. How we use the data</h2>
+        <ul>
+<li>Show your baby's routine, timeline and history.</li>
+<li>Run statistical calculations such as sleep windows, averages and growth curves.</li>
+<li>Generate suggestions, forecasts and AI analyses inside the app.</li>
+<li>Transcribe audio and understand messages to create entries by voice.</li>
+<li>Keep your account secure, prevent abuse and provide support.</li>
+</ul>
+<p>We do not sell your data, we do not use your baby's data for advertising and we do not build marketing profiles.</p>
+      </section>
+
+      <section class="policy-section" id="children">
+        <h2>4. Children's data (LGPD Article 14)</h2>
+        <p>Ninna: Baby Tracker AI is made for moms, dads and adult caregivers to follow a child's routine. It is not intended to be used by the child.</p>
+<p>We only process your baby's data with the specific and prominent consent of at least one parent or legal guardian, given at sign-up. All processing is done in the child's best interest and limited to what the purposes above require.</p>
+<p>You can withdraw this consent at any time by writing to <a href="mailto:privacidade@baiduca.com">privacidade@baiduca.com</a> or by deleting your account in Profile.</p>
+      </section>
+
+      <section class="policy-section" id="ai">
+        <h2>5. Artificial intelligence and partner providers</h2>
+        <p>Some features use third-party artificial intelligence services. To make them work, we send these providers only the content each task needs:</p>
+<ul>
+<li>Voice transcription: recorded audio is sent for transcription to OpenAI, Google (Gemini) or Groq, depending on the active service. We do not keep the audio file on our servers; we only keep the entry created from it.</li>
+<li>Assistant and analyses: messages sent to the assistant and your baby's routine information (such as times, amounts and age) are sent to OpenAI or Google (Gemini) to generate answers, summaries and analyses.</li>
+</ul>
+<p>AI answers may contain mistakes and do not replace an assessment by a health professional. Always check entries created by voice.</p>
+      </section>
+
+      <section class="policy-section" id="sharing">
+        <h2>6. Who we share data with</h2>
+        <ul>
+<li>The artificial intelligence providers described in section 5.</li>
+<li>Hosting and database providers that keep the app running.</li>
+<li>Google or Apple, when you choose to sign in with those accounts.</li>
+<li>Telegram or WhatsApp, only if you connect these integrations.</li>
+<li>Public authorities, when required by law or court order.</li>
+</ul>
+<p>These partners may only use the data to provide their service to Ninna: Baby Tracker AI.</p>
+      </section>
+
+      <section class="policy-section" id="transfer">
+        <h2>7. International transfers</h2>
+        <p>Some of these providers keep servers outside Brazil, mainly in the United States. In these cases, the transfer happens under the cases allowed by LGPD Article 33, with providers that offer data protection safeguards.</p>
+      </section>
+
+      <section class="policy-section" id="retention">
+        <h2>8. How long we keep data</h2>
+        <p>We keep your data while your account exists. When you delete your account in Profile, we permanently erase the account, the baby profiles and the entire history.</p>
+<p>Some records, such as access logs, may be kept for the period required by law, only to meet that obligation.</p>
+      </section>
+
+      <section class="policy-section" id="rights">
+        <h2>9. Your rights and how to use them</h2>
+        <p>Under the LGPD (Article 18), you can:</p>
+<ul>
+<li>Confirm whether we process your data and access it.</li>
+<li>Correct incomplete or outdated data: edit the baby profile, activities and measurements in the app.</li>
+<li>Take your data to another service (portability): export to PDF, Excel or CSV on the Insights screen.</li>
+<li>Delete your account and all data: use "Delete Account & Data" in Profile.</li>
+<li>Know who we share data with and withdraw your consent.</li>
+<li>Ask for anonymization, blocking or deletion of unnecessary data.</li>
+</ul>
+<p>For requests not available directly in the app, write to <a href="mailto:privacidade@baiduca.com">privacidade@baiduca.com</a>. You can also file a complaint with Brazil's National Data Protection Authority (ANPD).</p>
+      </section>
+
+      <section class="policy-section" id="security">
+        <h2>10. Security</h2>
+        <p>We use encrypted connections, hashed passwords, token authentication, rate limiting and AI provider keys stored only on the server, never in the app. No system is completely immune to failures; if an incident poses a relevant risk, we will notify you and the ANPD.</p>
+      </section>
+
+      <section class="policy-section" id="changes">
+        <h2>11. Changes to this policy</h2>
+        <p>If we change this policy in a relevant way, we will let you know in the app and ask for your consent again before continuing to process your data.</p>
+      </section>
+      </article>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <span>© 2026 Baiduca · baiduca.com</span>
+    <span>Dúvidas ou LGPD: <a href="mailto:privacidade@baiduca.com">privacidade@baiduca.com</a></span>
+  </footer>
+
+  <script>
+    function switchLang(lang) {
+      const isPt = lang === 'pt';
+      document.getElementById('lang-pt').style.display = isPt ? 'block' : 'none';
+      document.getElementById('lang-en').style.display = isPt ? 'none' : 'block';
+      document.getElementById('btn-pt').classList.toggle('active', isPt);
+      document.getElementById('btn-en').classList.toggle('active', !isPt);
+      document.documentElement.lang = isPt ? 'pt-BR' : 'en';
+      document.title = isPt
+        ? 'Política de Privacidade · Ninna: Baby Tracker AI · Baiduca'
+        : 'Privacy Policy · Ninna: Baby Tracker AI · Baiduca';
+
+      const url = new URL(window.location);
+      if (isPt) {
+        url.searchParams.delete('lang');
+      } else {
+        url.searchParams.set('lang', 'en');
+      }
+      window.history.replaceState({}, '', url);
+    }
+
+    // Inicialização baseada na URL ou idioma do navegador
+    (function init() {
+      const params = new URLSearchParams(window.location.search);
+      const urlLang = params.get('lang');
+      if (urlLang === 'en') {
+        switchLang('en');
+      } else if (!urlLang && navigator.language && !navigator.language.startsWith('pt')) {
+        switchLang('en');
+      }
+    })();
+  </script>
+</body>
+</html>
